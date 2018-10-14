@@ -1,0 +1,14 @@
+# frozen_string_literal: true
+
+module Coins
+  ONE_PENCE = '1p'
+  TWO_PENCES = '2p'
+  FIVE_PENCES = '5p'
+  TEN_PENCES = '10p'
+  TWENTY_PENCES = '20p'
+  FIFTY_PENCES = '50p'
+  ONE_POUND = '£1'
+  TWO_POUNDS = '£2'
+
+  TYPES = [ONE_PENCE, TWO_PENCES, FIVE_PENCES, TEN_PENCES, TWENTY_PENCES, FIFTY_PENCES, ONE_POUND, TWO_POUNDS].freeze
+end
