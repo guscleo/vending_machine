@@ -33,7 +33,7 @@ Shouldn’t be too difficult to re-use above services
 
 Idea: If the customer added coins, should we consider those coins to give the best change?
 
-## Technical decisions
+## Technical decisions (before implementation)
 
 The exercise asks to design a vending machine using ruby. From the requirements above, I am able to define the interface for a vending machine, there are two things I need to decide:
 
@@ -43,3 +43,14 @@ The exercise asks to design a vending machine using ruby. From the requirements 
     2. For the purpose of this exercise, I am considering out of scope race conditions, like 2 customers trying to use the same vending machine at the same time. I am planning to keep the context of two different sessions separated, just not planning to deal with 2 sessions trying to access the same resources.
 
 * How to interact with this vending machine. I will leave a potential UI as out of scope, the tests should provide a clear idea about how we can use the vending machine, and I am happy to come back to this and build a UI if it was something you were looking forward to see me doing.
+
+## Conclusions (after implementation)
+
+I have built:
+* A vending machine object, that keeps the state of its products & coins stocks
+* A Coins module, that has coin types and their values
+* A session, that can be created "within" a vending machine. It keeps its status and allows users to select a product and insert coins. Based on each action, it recalculates its state and whether it should return the product or not, and change.
+* A change calculator, that calculates how much coins of each type it returns based on a given change amount to return and the current coin stock.
+* A small script `app.rb` to play with the code.
+
+Perhaps you were looking more for a JSON API implementation, or an implementation backed by ActiveRecord tables, etc. Given the test is open to interpretation, I had to do some assumptions/decisions on how to accomplish the acceptance criteria. But if there is something else in particular you would like to test my skills on, I am more than happy to do it.
