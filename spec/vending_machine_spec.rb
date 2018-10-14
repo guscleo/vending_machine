@@ -77,21 +77,4 @@ RSpec.describe VendingMachine do
       expect { subject.reload_coins(coins: new_coins) }.to_not(change { subject.coins_stock.stock[Coins::ONE_POUND] })
     end
   end
-
-  context 'once an item is selected' do
-    context 'and the appropriate amount of money is inserted' do
-      xit 'returns the correct product' do
-      end
-    end
-
-    context 'and too much money is provided' do
-      xit 'returns change' do
-      end
-    end
-
-    context 'and insufficient funds have been inserted' do
-      xit 'asks for more money' do
-      end
-    end
-  end
 end

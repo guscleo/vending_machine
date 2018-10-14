@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
-require 'vending_machine'
 
+require 'money'
 Money.default_currency = Money::Currency.new('GBP')
+
+require 'vending_machine'
+require 'session'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

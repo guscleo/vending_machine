@@ -11,4 +11,15 @@ module Coins
   TWO_POUNDS = '£2'
 
   TYPES = [ONE_PENCE, TWO_PENCES, FIVE_PENCES, TEN_PENCES, TWENTY_PENCES, FIFTY_PENCES, ONE_POUND, TWO_POUNDS].freeze
+
+  VALUES = {
+    ONE_PENCE => Money.new(1),
+    TWO_PENCES => Money.new(2),
+    FIVE_PENCES => Money.new(5),
+    TEN_PENCES => Money.new(10),
+    TWENTY_PENCES => Money.new(20),
+    FIFTY_PENCES => Money.new(50),
+    ONE_POUND => Money.new(100),
+    TWO_POUNDS => Money.new(200)
+  }.freeze
 end
