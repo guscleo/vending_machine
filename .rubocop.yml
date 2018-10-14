@@ -1,5 +1,7 @@
 AllCops:
   TargetRubyVersion: 2.5.0
+  Exclude:
+    - 'app.rb'
 
 Metrics/BlockLength:
   Enabled: false
